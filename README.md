@@ -2,11 +2,11 @@
 
 Este proyecto consiste en un script de Python que utiliza la librería SAM de Facebook para segmentar una imagen y generar máscaras que identifican objetos en la imagen. También incluye un par de script que utilizan la misma librería para generar máscaras de objetos a partir de puntos de entrada en la imagen o de bounding boxes.
 
-![Ejemplo: Faro de Navidad, Cartagena, España](example.png)
+![Ejemplo: Faro de Navidad, Cartagena, España](screenshots/example.png)
 
-![Ejemplo: Faro de Navidad, Cartagena, España](example-predictor-multiple-points.png)
+![Ejemplo: Faro de Navidad, Cartagena, España](screenshots/example-predictor-multiple-points.png)
 
-![Ejemplo: Faro de Navidad, Cartagena, España](example-predictor-multiple-boxes.png)
+![Ejemplo: Faro de Navidad, Cartagena, España](screenshots/example-predictor-multiple-boxes.png)
 
 # Requerimientos:
 
