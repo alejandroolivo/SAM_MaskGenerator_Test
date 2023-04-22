@@ -7,9 +7,9 @@ import io
 from segment_anything import sam_model_registry, SamAutomaticMaskGenerator, SamPredictor
 
 # params
-model_size = "small" # small, medium, large
+model_size = "large" # small, medium, large
 device = "cuda:0" # cuda:0, cpu
-image_name = "dog.png"
+image_name = "cartagena.png"
 
 # load image
 image = cv2.imread('image_examples/' + image_name)
@@ -27,7 +27,7 @@ if(model_size == "medium"):
     model_type = "vit_l"
 
 if(model_size == "large"):
-    sam_checkpoint = "model_checkpoint/am_vit_h_4b8939.pth"
+    sam_checkpoint = "model_checkpoint/sam_vit_h_4b8939.pth"
     model_type = "vit_h"
 
 # load model and send to device
