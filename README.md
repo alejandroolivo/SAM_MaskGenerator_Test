@@ -1,4 +1,4 @@
-# SegmentAnythingModel_first_tests
+# Segment Anything Model - Mask Generator test
 
 Este script de Python utiliza la librería SAM de Facebook para segmentar una imagen. SAM (Segment Anything with Masking) es una librería de código abierto que permite la segmentación de objetos en imágenes de forma automática. En este script se utiliza SAM para generar máscaras que identifican objetos en una imagen.
 
