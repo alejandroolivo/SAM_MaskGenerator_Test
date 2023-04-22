@@ -4,7 +4,7 @@ Este proyecto consiste en un script de Python que utiliza la librería SAM de Fa
 
 ![Ejemplo: Faro de Navidad, Cartagena, España](example.png)
 
-![Ejemplo: Faro de Navidad, Cartagena, España](example-predictor.png)
+![Ejemplo: Faro de Navidad, Cartagena, España](example-predictor-multiple-points.png)
 
 # Requerimientos:
 

@@ -9,7 +9,7 @@ from segment_anything import sam_model_registry, SamAutomaticMaskGenerator, SamP
 # params
 model_size = "medium" # small, medium, large
 device = "cuda:0" # cuda:0, cpu
-image_name = "kefir.png"
+image_name = "cartagena.png"
 
 # load image
 image = cv2.imread('image_examples/' + image_name)
@@ -38,7 +38,7 @@ def show_box(box, ax):
     ax.add_patch(plt.Rectangle((x0, y0), w, h, edgecolor='green', facecolor=(0,0,0,0), lw=2))  
 
 # get middle point of image
-input_point = np.array([[image.shape[1]/2 - 0, image.shape[0]/2 - 775],[image.shape[1]/2 - 0, image.shape[0]/2 + 770],[image.shape[1]/2, image.shape[0]/2 - 100],[image.shape[1]/2, image.shape[0]/2 + 100],[image.shape[1]/2 + 180, image.shape[0]/2 + 350],[image.shape[1]/2 - 180, image.shape[0]/2 + 550]])
+input_point = np.array([[300,375],[500,250],[250,50],[350,130],[400,250],[333,290]])
 # input_point = np.array([[500, 375]])
 input_label = np.array([0, 0, 0, 1, 1, 1])
 plt.figure(figsize=(10,10))
