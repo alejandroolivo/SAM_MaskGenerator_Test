@@ -25,3 +25,9 @@ Establecer los parámetros deseados:
 Ejecutar el script.
 
 El script mostrará la imagen original junto con las máscaras que identifican los objetos en la imagen. También se puede descomentar la sección de código que muestra las máscaras por separado. El tiempo de ejecución se mostrará en la consola.
+
+# License
+
+This project is licensed under the Apache License 2.0. For more information, please refer to the [LICENSE](LICENSE) file in the root of this repository.
+Apache License 2.0
+Copyright (c) 2023 Alejandro Olivo
