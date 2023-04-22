@@ -7,20 +7,14 @@ import io
 from segment_anything import sam_model_registry, SamAutomaticMaskGenerator, SamPredictor
 
 # params
-model_size = "large" # small, medium, large
+model_size = "medium" # small, medium, large
 device = "cuda:0" # cuda:0, cpu
-image_name = "cartagena.png"
+image_name = "kefir.png"
 
 # load image
 image = cv2.imread('image_examples/' + image_name)
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
-plt.figure(figsize=(10,10))
-plt.imshow(image)
-plt.axis('off')
-plt.show()
-
-sys.path.append("..")
 
 # plotting methods
 def show_mask(mask, ax, random_color=False):
@@ -42,6 +36,18 @@ def show_box(box, ax):
     x0, y0 = box[0], box[1]
     w, h = box[2] - box[0], box[3] - box[1]
     ax.add_patch(plt.Rectangle((x0, y0), w, h, edgecolor='green', facecolor=(0,0,0,0), lw=2))  
+
+# get middle point of image
+input_point = np.array([[image.shape[1]/2 - 0, image.shape[0]/2 - 775],[image.shape[1]/2 - 0, image.shape[0]/2 + 770],[image.shape[1]/2, image.shape[0]/2 - 100],[image.shape[1]/2, image.shape[0]/2 + 100],[image.shape[1]/2 + 180, image.shape[0]/2 + 350],[image.shape[1]/2 - 180, image.shape[0]/2 + 550]])
+# input_point = np.array([[500, 375]])
+input_label = np.array([0, 0, 0, 1, 1, 1])
+plt.figure(figsize=(10,10))
+plt.imshow(image)
+show_points(input_point, input_label, plt.gca())
+plt.axis('off')
+plt.show()
+
+sys.path.append("..")
 
 # download model checkpoint (https://github.com/facebookresearch/segment-anything#model-checkpoints)
 if(model_size == "small"):
@@ -68,17 +74,6 @@ predictor.set_image(image)
 # get time
 start = time.time()
 
-# set points
-
-# get middle point of image
-input_point = np.array([[image.shape[1]/2, image.shape[0]/2]])
-# input_point = np.array([[500, 375]])
-input_label = np.array([1])
-plt.figure(figsize=(10,10))
-plt.imshow(image)
-show_points(input_point, input_label, plt.gca())
-plt.axis('off')
-plt.show()
 
 # predict mask
 masks, scores, logits = predictor.predict(
