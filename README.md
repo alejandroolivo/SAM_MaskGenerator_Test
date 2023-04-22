@@ -26,9 +26,9 @@ https://github.com/facebookresearch/segment-anything#model-checkpoints
 
 3. Establece los parámetros deseados en el archivo del script:
 
-- model_size: Tamaño del modelo SAM que deseas utilizar (small, medium o large).
-- device: Dispositivo donde se ejecutará el modelo (cuda:0 para GPU o cpu para CPU).
-- image_name: Nombre de la imagen que deseas segmentar.
+    - model_size: Tamaño del modelo SAM que deseas utilizar (small, medium o large).
+    - device: Dispositivo donde se ejecutará el modelo (cuda:0 para GPU o cpu para CPU).
+    - image_name: Nombre de la imagen que deseas segmentar.
 
 4. Ejecuta el script.
 
@@ -41,11 +41,11 @@ https://github.com/facebookresearch/segment-anything#model-checkpoints
 
 3. Establece los parámetros deseados en el archivo del script:
 
-    model_size: Tamaño del modelo SAM que deseas utilizar (small, medium o large).
-    device: Dispositivo donde se ejecutará el modelo (cuda:0 para GPU o cpu para CPU).
-    image_name: Nombre de la imagen en la que deseas generar la máscara.
-    input_point: Punto de entrada para generar la máscara.
-    input_label: Etiqueta para el punto de entrada (1 para objeto, 0 para fondo).
+    - model_size: Tamaño del modelo SAM que deseas utilizar (small, medium o large).
+    - device: Dispositivo donde se ejecutará el modelo (cuda:0 para GPU o cpu para CPU).
+    - image_name: Nombre de la imagen en la que deseas generar la máscara.
+    - input_point: Punto de entrada para generar la máscara.
+    - input_label: Etiqueta para el punto de entrada (1 para objeto, 0 para fondo).
     
 4. Ejecuta el script.
 
