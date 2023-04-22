@@ -2,6 +2,8 @@
 
 Este script de Python utiliza la librería SAM de Facebook para segmentar una imagen. SAM (Segment Anything with Masking) es una librería de código abierto que permite la segmentación de objetos en imágenes de forma automática. En este script se utiliza SAM para generar máscaras que identifican objetos en una imagen.
 
+![Ejemplo: Faro de Navidad, Cartagena, España](example.png)
+
 # Requerimientos:
 
 matplotlib==3.7.1
